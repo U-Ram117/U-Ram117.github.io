@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramiro Ortega | Portfolio</title>
+  <meta name="description" content="Portfolio of Ramiro Ortega, Business Administration student at the University of Utah.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="#top" class="nav-name">Ramiro Ortega</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <p class="hero-eyebrow">Portfolio</p>
+      <h1>Ramiro Ortega</h1>
+      <p class="title-line">Business Administration Student</p>
+      <p class="school-line">University of Utah</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <p class="section-label">About Me</p>
+      <h2>Overview</h2>
+      <p>
+        I'm a Business Administration student at the University of Utah hoping to build a career in
+        consulting, though I stay open to any opportunity that builds knowledge and experience along
+        the way. What draws me to AI isn't just using it — I'm curious about how the "thinking" part
+        actually works, and whether these systems truly understand what they respond with or are
+        doing something else entirely. On the technical side, my interests lie in finance and business
+        operations, where I want to combine solid fundamentals with emerging AI tools to help
+        organizations make sharper, faster decisions.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <p class="section-label">Skills</p>
+      <h2>What I work with</h2>
+      <ul class="skills-grid">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>Microsoft Excel</li>
+        <li>Data Analytics</li>
+        <li>AI Prompt Engineering</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <p class="section-label">Projects</p>
+      <h2>Coursework &amp; projects</h2>
+      <!-- TODO: Replace these four placeholders with your real projects as you build them this semester. -->
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>AI Business Analysis</h3>
+          <p>Analyze business data using ChatGPT to surface trends and support decision-making.</p>
+          <span class="project-status">Placeholder — details coming soon</span>
+        </div>
+        <div class="project-card">
+          <h3>Data Visualization</h3>
+          <p>Dashboard built with Tableau to communicate key business metrics visually.</p>
+          <span class="project-status">Placeholder — details coming soon</span>
+        </div>
+        <div class="project-card">
+          <h3>Web Development</h3>
+          <p>Responsive Bootstrap website built to practice front-end development fundamentals.</p>
+          <span class="project-status">Placeholder — details coming soon</span>
+        </div>
+        <div class="project-card">
+          <h3>Process Improvement</h3>
+          <p>AI-assisted redesign of a business workflow to reduce manual effort and errors.</p>
+          <span class="project-status">Placeholder — details coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="wrap">
+      <p class="section-label">Resume</p>
+      <h2>Download my resume</h2>
+      <div class="resume-box">
+        <p style="margin:0;">
+          <!-- TODO: Once you have a resume PDF, upload it to your repo (e.g. as resume.pdf)
+               and swap the line below to: <a class="btn" href="resume.pdf" download>Download Resume (PDF)</a> -->
+          My resume is still in progress — check back soon.
+        </p>
+        <span class="btn-disabled">Resume coming soon</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <p class="section-label">Contact</p>
+      <h2>Get in touch</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:u0962926@umail.utah.edu">u0962926@umail.utah.edu</a>
+        </li>
+        <li>
+          <span class="contact-label">LinkedIn</span>
+          <!-- TODO: replace with your LinkedIn URL, or delete this line if you'd rather skip it -->
+          <a href="#">linkedin.com/in/your-profile</a>
+        </li>
+        <li>
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/U-Ram117" target="_blank" rel="noopener">github.com/U-Ram117</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Ramiro Ortega. Built for IS 3060.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>
